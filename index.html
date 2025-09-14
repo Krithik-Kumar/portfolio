@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krithik Kumar | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { cursor: none; }
+    .custom-cursor { position: fixed; top:0; left:0; width:20px; height:20px; border-radius:50%; background:white; pointer-events:none; z-index:9999; transform:translate(-50%, -50%); transition: transform 0.1s ease; }
+    section, header { opacity:0; transform: translateY(30px); transition: all 0.8s ease; }
+    section.visible, header.visible { opacity:1; transform: translateY(0); }
+    .hover-scale { transition: transform 0.3s; }
+    .hover-scale:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans overflow-x-hidden">
+
+<div class="custom-cursor" id="cursor"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="fixed w-full z-50 bg-gray-900/50 backdrop-blur-md transition-all">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+    <div class="text-2xl font-bold text-white">Krithik Kumar</div>
+    <ul class="hidden md:flex space-x-6 font-medium">
+      <li><a href="#about" class="hover:text-indigo-400 transition">About</a></li>
+      <li><a href="#interests" class="hover:text-indigo-400 transition">Interests</a></li>
+      <li><a href="#projects" class="hover:text-indigo-400 transition">Projects</a></li>
+      <li><a href="#contact" class="hover:text-indigo-400 transition">Contact</a></li>
+    </ul>
+    <button id="menuToggle" class="md:hidden p-2 text-gray-200 hover:text-indigo-400">☰</button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-gray-900/95">
+    <ul class="flex flex-col space-y-2 p-4 text-center">
+      <li><a href="#about" class="block py-2 hover:text-indigo-400">About</a></li>
+      <li><a href="#interests" class="block py-2 hover:text-indigo-400">Interests</a></li>
+      <li><a href="#projects" class="block py-2 hover:text-indigo-400">Projects</a></li>
+      <li><a href="#contact" class="block py-2 hover:text-indigo-400">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="min-h-screen flex flex-col justify-center items-center text-center px-4">
+  <img src="images/profile.png" alt="Profile" class="w-40 h-40 rounded-full mb-6 border-4 border-white shadow-lg hover:scale-105 transition-transform">
+  <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">Hello, I'm Krithik Kumar</h1>
+  <p class="text-gray-400 max-w-xl mb-6">Electronics hobbyist | Embedded Systems | IoT</p>
+  <div class="flex space-x-4">
+    <a href="https://github.com/Krithik-Kumar" target="_blank" class="text-white hover:text-indigo-400 text-2xl transition"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/krithik-kumar-69b803355/" target="_blank" class="text-white hover:text-indigo-400 text-2xl transition"><i class="fab fa-linkedin"></i></a>
+   
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6 text-indigo-400">About Me</h2>
+    <p class="text-gray-300">I'm an electronics hobbyist and embedded systems enthusiast. I enjoy building projects combining hardware and software, exploring microcontrollers, consumer electronics and IoT solutions, and documenting my work along the way.</p>
+  </div>
+</section>
+
+<!-- INTERESTS -->
+<section id="interests" class="py-24 px-4 bg-gray-800">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-12 text-indigo-400">Interests</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover-scale flex flex-col items-center">
+        <i class="fas fa-microchip text-4xl mb-2 text-indigo-400"></i>
+        <span>Embedded Systems</span>
+      </div>
+      <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover-scale flex flex-col items-center">
+        <i class="fas fa-robot text-4xl mb-2 text-indigo-400"></i>
+        <span>Robotics</span>
+      </div>
+      <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover-scale flex flex-col items-center">
+        <i class="fas fa-network-wired text-4xl mb-2 text-indigo-400"></i>
+        <span>IoT Applications</span>
+      </div>
+      <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover-scale flex flex-col items-center">
+        <i class="fas fa-cogs text-4xl mb-2 text-indigo-400"></i>
+        <span>Automation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-24 px-4">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-12 text-indigo-400">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover-scale flex flex-col items-center" data-tilt data-tilt-max="15">
+        <i class="fas fa-cog text-4xl text-indigo-400 mb-2"></i>
+        <h3 class="text-xl font-bold mb-2">Low-cost CNC</h3>
+        <p class="text-gray-300 mb-4 text-center">Affordable CNC machine for metal cutting & milling.</p>
+        <a href="https://github.com/Krithik-Kumar/labbenchpowersupply" class="text-indigo-400 hover:text-indigo-500 font-medium flex items-center space-x-1 transition">
+          <span>View Project</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover-scale flex flex-col items-center" data-tilt data-tilt-max="15">
+        <i class="fas fa-bolt text-4xl text-indigo-400 mb-2"></i>
+        <h3 class="text-xl font-bold mb-2">1200W Lab Bench Power Supply (XY6020L)</h3>
+        <p class="text-gray-300 mb-4 text-center">High-power adjustable power supply for powering electronics.</p>
+        <a href="https://github.com/Krithik-Kumar/labbenchpowersupply" class="text-indigo-400 hover:text-indigo-500 font-medium flex items-center space-x-1 transition">
+          <span>View Project</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover-scale flex flex-col items-center" data-tilt data-tilt-max="15">
+        <i class="fas fa-microchip text-4xl text-indigo-400 mb-2"></i>
+        <h3 class="text-xl font-bold mb-2">Multifunction Benchtop Device</h3>
+        <p class="text-gray-300 mb-4 text-center">ESP32-based device with Electronic load, voltage/current monitoring, signal generator, and logging.</p>
+        <a href="https://github.com/Krithik-Kumar/labbenchpowersupply" class="text-indigo-400 hover:text-indigo-500 font-medium flex items-center space-x-1 transition">
+          <span>View Project</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover-scale flex flex-col items-center" data-tilt data-tilt-max="15">
+        <i class="fas fa-robot text-4xl text-indigo-400 mb-2"></i>
+        <h3 class="text-xl font-bold mb-2">Robotic Vacuum Cleaner</h3>
+        <p class="text-gray-300 mb-4 text-center">Autonomous floor-cleaning robot with room mapping.</p>
+        <a href="#" class="text-indigo-400 hover:text-indigo-500 font-medium flex items-center space-x-1 transition">
+          <span>View Project</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover-scale flex flex-col items-center" data-tilt data-tilt-max="15">
+        <i class="fas fa-charging-station text-4xl text-indigo-400 mb-2"></i>
+        <h3 class="text-xl font-bold mb-2">Inductive Charging Road</h3>
+        <p class="text-gray-300 mb-4 text-center">Wireless charging solution for vehicles on-the-go.</p>
+        <a href="#" class="text-indigo-400 hover:text-indigo-500 font-medium flex items-center space-x-1 transition">
+          <span>View Project</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover-scale flex flex-col items-center" data-tilt data-tilt-max="15">
+        <i class="fas fa-water text-4xl text-indigo-400 mb-2"></i>
+        <h3 class="text-xl font-bold mb-2">Geothermal System</h3>
+        <p class="text-gray-300 mb-4 text-center">Design and implementation of a sustainable geothermal energy system.</p>
+        <a href="#" class="text-indigo-400 hover:text-indigo-500 font-medium flex items-center space-x-1 transition">
+          <span>View Project</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 px-4 bg-gray-800">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6 text-indigo-400">Contact Me</h2>
+    <p class="text-gray-300 mb-6">Reach out via email or social media:</p>
+    <ul class="space-y-2">
+      <li>Email: <a href="mailto:krithik_kumar@outlook.com" class="text-indigo-400 hover:text-indigo-500">krithik_kumar@outlook.com</a></li>
+      <li>GitHub: <a href="https://github.com/Krithik-Kumar" target="_blank" class="text-indigo-400 hover:text-indigo-500">github.com/Krithik-Kumar</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/krithik-kumar-69b803355/" target="_blank" class="text-indigo-400 hover:text-indigo-500">linkedin.com/in/krithik-kumar-69b803355</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-8 bg-gray-900 text-center text-gray-400">
+  &copy; 2025 Krithik Kumar. All Rights Reserved.
+</footer>
+
+<script>
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  window.addEventListener('mousemove', e => {
+    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+  });
+
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 50){
+      navbar.classList.add('bg-gray-900', 'shadow-lg');
+      navbar.classList.remove('bg-gray-900/50');
+    } else {
+      navbar.classList.add('bg-gray-900/50');
+      navbar.classList.remove('bg-gray-900', 'shadow-lg');
+    }
+  });
+
+  // Scroll animations
+  const sections = document.querySelectorAll('section, header');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+  sections.forEach(section => observer.observe(section));
+
+  // VanillaTilt for projects
+  VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.2,
+  });
+</script>
+
+</body>
+</html>
